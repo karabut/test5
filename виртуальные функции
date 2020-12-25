@@ -1,0 +1,18 @@
+class Comand {
+public:
+    virtual void applyTo(board& board) = 0;
+};
+
+class Set : public Comand {
+private:
+    int x;
+    int y;
+
+public:
+    Set(int x, int y);
+
+    void applyTo(board& board) override;
+};
+
+это код из моей программы Game. В данном коде видно, что благодаря виртуальной функции могу хадавать ее поведение по разному для классов наследников. Класс, содержащий виртуальную функцию
+- базовый в иерархии порождения. 
